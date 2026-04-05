@@ -4,27 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        neon: '#7f5af0',
+        background: '#030712', // deep navy/charcoal tailwind slate-950
+        cardBg: 'rgba(30, 41, 59, 0.5)',
+        neonGreen: '#2ecc71',
+        brightBlue: '#60a5fa',
       },
-      backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #060b20 0%, #0f1f46 40%, #120a42 100%)',
-      },
-      boxShadow: {
-        glow: '0 0 20px rgba(127,90,240,0.35), 0 0 35px rgba(42,119,255,0.25)',
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['Geist Mono', 'monospace'],
       },
       animation: {
-        float: 'float 6s ease-in-out infinite',
-        heartbeat: 'heartbeat 2s ease-in-out infinite',
+        glow: 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        heartbeat: {
-          '0%, 100%': { transform: 'scale(1)' },
-          '40%': { transform: 'scale(1.05)' },
-          '60%': { transform: 'scale(0.95)' },
+        glow: {
+          '0%': { boxShadow: '0 0 10px #2ecc71, 0 0 20px #2ecc71' },
+          '100%': { boxShadow: '0 0 20px #2ecc71, 0 0 30px #2ecc71' },
         },
       },
     },
